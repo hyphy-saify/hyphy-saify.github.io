@@ -11,8 +11,6 @@ a {
     -o-background-size: cover;
     background-size: cover;
     height: 1900px;
-    border:0px;
-    outline:0px;
 }
 
 #big {
@@ -30,7 +28,8 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bungee Inline', cursive;
+    text-shadow: -1px 0 orange, 0 1px orange, 1px 0 orange, 0 -1px orange;
 }
 
 #header{
@@ -39,4 +38,30 @@ body {
     color: white;
     z-index: 3;
     text-align: center;
+}
+
+nav {
+    background: rgb(32, 78, 153);
+    text-align: center;
+    height: 45px;
+    margin-bottom: -45px;
+}
+
+nav > li {
+    display: inline-block;
+    font-size: 24px;
+    margin: 10px 40px;
+    color: white;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+nav li a {
+    color: white;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
 }
