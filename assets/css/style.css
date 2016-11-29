@@ -14,10 +14,9 @@ a {
 }
 
 #big {
-    font-size: 72px;
+    font-size: 48px;
     font-weight: 300;
-    padding-top: 30%;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.74902);
     display: inline-block;
     margin: 10px 0px;
@@ -41,6 +40,7 @@ body {
 #firstImpressionText{
     padding-left: 10%;
     padding-right: 10%;
+    height: 100%;
 }
 
 #funkyFont{
@@ -49,7 +49,9 @@ body {
 }
 
 nav {
-    background: rgb(32, 78, 153);
+    background: red; /* For browsers that do not support gradients */
+
+    background: linear-gradient(to right, rgb(76, 70, 70), rgb(133, 77, 135)); /* Standard syntax */
     text-align: center;
     height: 45px;
     margin-bottom: -45px;
@@ -64,6 +66,10 @@ nav > li {
     -o-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+}
+
+.small{
+    padding-bottom: 5px;
 }
 
 nav li a {

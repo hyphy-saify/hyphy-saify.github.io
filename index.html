@@ -47,24 +47,27 @@
     <div id="container" ng-controller="MainController">
         <div id="funkyFont">
             <div class="background" layout="row">
+                <div id="firstImpression" flex="50" style="background:RGBA(0,0,0,0.5)">
+
+                    <div id="firstImpressionText" layout="column">
 
 
+                        <div flex="30"></div>
 
-                <div id="firstImpression" flex="30" style="background:RGBA(0,0,0,0.5)">
-                    <div id="firstImpressionText">
-                        <div id="big">
-                            Saif Rahman.
+                        <div flex>
+                            <div id="big">
+                                Saif Rahman
+                            </div>
+                            <div class="small">Aspiring Software Engineer</div>
+                            <div class="small">Life Enthusiast</div>
                         </div>
-                        <div id="small">Aspiring Software Engineer. Life Enthusiast.</div>
+
+
                     </div>
+
                 </div>
-
-                <div  flex="70"></div>
-
+                <div  flex="50"></div>
             </div>
-
-
-
             <div id="content" >
                 <nav>
                     <li id="item1"><a href="" ng-click="showAbout()">About</a></li>
