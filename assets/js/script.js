@@ -3,10 +3,13 @@ $(document).ready(function() {
     $('.background').css('height', $(window).height() + 'px');
 
     enableResize();
-    fadeInIntro()
+    stickyNav()
 
 
 });
+
+
+
 
 function enableResize() {
     $(window).on('resize', function(event) {
@@ -37,4 +40,14 @@ function fadeInIntro() {
         $('#quote').fadeIn(1000);
     }, 2250);
 
+}
+
+function stickyNav() {
+    $('#content').waypoint(function(direction) {
+        if (direction == 'down') {
+            $('nav').addClass('sticky');
+        } else {
+            $('nav').removeClass('sticky');
+        }
+    });
 }

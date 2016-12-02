@@ -59,6 +59,18 @@ nav {
     margin-bottom: -45px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(50, 41, 51, .75), rgba(133, 77, 135, .75)); /* Standard syntax */
+    z-index: 100;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
 nav > li {
     display: inline-block;
     font-size: 24px;
