@@ -10,7 +10,15 @@ a {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 1900px;
+ }
+
+#content{
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
 #big {
@@ -77,6 +85,7 @@ nav li a {
 a:hover {
     text-shadow: 0 0 4px #ffffff;
 }
+
 
 #navPadder {
     margin-top: 45px;

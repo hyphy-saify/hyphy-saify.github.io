@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <link href='assets/css/font1.css' rel='stylesheet' type='text/css'>
     <link href='assets/css/font2.css' rel='stylesheet' type='text/css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="keywords" content="website">
     <meta name="author" content="HYPHY_SAIFY">
-
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 
     <script src="assets/js/vendor/jquery-2.1.3.min.js"></script>
     <script src="assets/js/vendor/jquery.waypoints.min.js"></script>
     <script src="assets/js/vendor/jquery.visible.min.js"></script>
     <script src="assets/js/vendor/social-likes.min.js"></script>
-    <!-- -->
+
     <script src="assets/js/vendor/angular.min.js"></script>
     <script src="assets/js/vendor/angular-animate.min.js"></script>
-
     <script src="assets/js/vendor/angular-aria.min.js"></script>
     <script src="assets/js/vendor/angular-messages.min.js"></script>
     <script src="assets/js/vendor/angular-route.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/css/angular-material.min.css">
-
     <script src="assets/js/vendor/angular-material.min.js"></script>
-    <!-- -->
-
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/routes.js"></script>
 
     <title>Saif's Personal Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 </head>
 
 <body ng-app="app" ng-cloak>
-    <div id="container" ng-controller="MainController">
-
+    <div id="container" ng-controller="MainController" >
         <div class="background" layout="row">
             <div id="firstImpression" flex="45" style="background:RGBA(0,0,0,0.5)">
                 <div id="firstImpressionText" layout="column">
@@ -52,14 +44,13 @@
                         <div id="big">
                             Saif Rahman
                         </div>
-                        <div class="small">Aspiring Software Engineer</div>
+                        <div id="small">Aspiring Software Engineer</div>
                     </div>
                 </div>
-
             </div>
             <div flex layout="column" style="height: 100%">
                 <div flex="90"></div>
-                <div flex
+                <div id="quote" flex
                      style="color: white;
                             text-align: right;
                             padding-right: 5%;
@@ -67,8 +58,6 @@
                     “<a style="color: white">You only live once</a>, but if you do it right, once is enough.”
                     <br>― Mae West
                 </div>
-
-
             </div>
         </div>
         <nav>
@@ -79,10 +68,35 @@
             <li id="item5"><a href="">Contact</a></li>
         </nav>
         <div id="navPadder"></div>
+        <div id="content" style="color:white;">
+            <div ng-show="page==0">
+                <div style="height: 900px;background: rgba(0,0,0,.85);" >
 
-        <div id="content" style="color:white; background: rgb(225, 173, 255)">
-            <div ng-show="page==0"><div ng-include="aboutView"></div></div>
-            <div ng-show="page==1"><div ng-include="blogView"></div></div>
+                    <div id="toDoList" style=" padding-top: 160px; text-align: center; font-family: 'Oswald', sans-serif;">
+                        <h1 style="font-size: 90px;
+                                   text-decoration: underline;
+                                   padding-bottom: 40px;">
+                            To-Do List</h1>
+                        <div style="padding-bottom: 20px">
+                            <input type="text" ng-model="newToDoListItem">
+                            <button ng-click="addToList()" >Add</button>
+                        </div>
+                        <ul>
+                            <li id="key-{{$index}}" ng-repeat="key in toDoList track by $index" style="display: none;">
+                                <span ng-click="strike($index)" ng-style="key.style"
+                                      style="font-size: 70px;
+                                             padding-bottom: 20px;">
+                                    {{key.name}}</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div ng-show="page==1">
+                <div layout="row" style=" background: rgba(0,0,0,.8); height:900px " >
+                </div>
+            </div>
         </div>
     </div>
 </body>
