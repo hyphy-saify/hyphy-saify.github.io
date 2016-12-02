@@ -4,9 +4,8 @@ $(document).ready(function() {
 
     enableResize();
     fadeInIntro()
-    $('#key-0').css('display', '');
-    $('#key-1').css('display', '');
-    $('#key-2').css('display', '');
+
+
 });
 
 function enableResize() {

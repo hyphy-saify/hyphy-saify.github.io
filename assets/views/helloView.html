@@ -1,5 +1,30 @@
-<div class="jumbotron text-center">
-    <h1>About Page</h1>
+<head>
+    <script src="assets/js/vendor/jquery-2.1.3.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
 
-    <p>{{ message }}</p>
+
+<div class="jumbotron text-center" ng-controller="helloController" >
+    <div id="content" style="color:white;">
+        <div style="height: 900px;background: rgba(0,0,0,.85);" >
+            <div id="toDoList" style=" padding-top: 160px; text-align: center; font-family: 'Oswald', sans-serif;">
+                <h1 style="font-size: 90px;
+                               text-decoration: underline;
+                               padding-bottom: 40px;">
+                    To-Do List</h1>
+                <div style="padding-bottom: 20px">
+                    <input type="text" ng-model="newToDoListItem">
+                    <button ng-click="addToList()" >Add</button>
+                </div>
+                <ul>
+                    <li id="key-{{$index}}" ng-repeat="key in toDoList track by $index" style="display: none;">
+                            <span ng-click="strike($index)" ng-style="key.style"
+                                  style="font-size: 70px;
+                                         padding-bottom: 20px;">
+                                {{key.name}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
