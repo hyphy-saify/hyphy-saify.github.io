@@ -3,8 +3,11 @@ app.factory('ListService',function(){
     }
 )
 
+
+
+
 // create the controller and inject Angular's $scope
-app.controller('helloController', function($scope, ListService) {
+app.controller('helloController', function($scope, ListService, $http) {
     /*To do list functionality*/
 
 
@@ -12,6 +15,7 @@ app.controller('helloController', function($scope, ListService) {
         for (i = 0; i < $scope.toDoList.length; i++) {
             $("#key-" + i.toString()).css('display', '');
         }
+        $('#tweetButton').css('display', 'none');
     });
 
     $scope.toDoList = ListService
@@ -32,6 +36,52 @@ app.controller('helloController', function($scope, ListService) {
         else
             $scope.toDoList[index].style = ""
     }
+
+
+    $scope.quote = 'Press the Button for a Random Quote'
+    $scope.author = 'Saif';
+    $scope.buttonMessage = 'New Quote'
+
+
+
+
+    $scope.newQuote = function() {
+        getRandomQuote();
+
+
+        $('#tweetButton').fadeIn(500);
+
+    }
+
+
+
+
+    getRandomQuote = function() {
+
+        setTimeout(function() {
+            $('#fadeQuote').fadeOut(500);
+            console.log("gets here ")
+        }, 0);
+
+        setTimeout(function() {
+            $http.get('http://quotes.stormconsultancy.co.uk/random.json')
+                .then(function(response) {
+                    $scope.quote = response.data.quote;
+                    $scope.author = response.data.author;
+                    $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + $scope.quote + '" ' + $scope.author));
+                });
+        }, 500);
+
+        setTimeout(function() {
+            $('#fadeQuote').fadeIn(500);
+        }, 500);
+
+    }
+
+
+
+
+
 });
 
 listItem = function (name) {

@@ -51,7 +51,7 @@ body {
 }
 
 nav {
-    background: red; /* For browsers that do not support gradients */
+    background: black; /* For browsers that do not support gradients */
 
     background: linear-gradient(to right, rgb(50, 41, 51), rgb(133, 77, 135)); /* Standard syntax */
     text-align: center;
