@@ -58,23 +58,41 @@ app.controller('helloController', function($scope, ListService, $http) {
 
     getRandomQuote = function() {
 
+
+
+        var quote;
+        var author;
+
+        $.ajax({
+            headers: {
+                "X-Mashape-Key": "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
+                Accept: "application/json",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
+            success: function(response) {
+                var json = eval("(" + response + ")");
+                quote = json.quote;
+                author = json.author;
+
+                $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + $scope.quote + '" ' + $scope.author));
+            }
+        });
+
         setTimeout(function() {
             $('#fadeQuote').fadeOut(500);
-            console.log("gets here ")
         }, 0);
 
         setTimeout(function() {
-            $http.get('http://quotes.stormconsultancy.co.uk/random.json')
-                .then(function(response) {
-                    $scope.quote = response.data.quote;
-                    $scope.author = response.data.author;
-                    $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + $scope.quote + '" ' + $scope.author));
-                });
+            $scope.quote = quote;
+            $scope.author = author;
+            $scope.$apply();
         }, 500);
 
         setTimeout(function() {
             $('#fadeQuote').fadeIn(500);
         }, 500);
+
 
     }
 

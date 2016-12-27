@@ -53,7 +53,7 @@ body {
 nav {
     background: black; /* For browsers that do not support gradients */
 
-    background: linear-gradient(to right, rgb(50, 41, 51), rgb(133, 77, 135)); /* Standard syntax */
+    background: linear-gradient(to right, rgb(22, 22, 22), rgb(71, 71, 71)); /* Standard syntax */
     text-align: center;
     height: 45px;
     margin-bottom: -45px;
@@ -63,7 +63,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, rgba(50, 41, 51, .75), rgba(133, 77, 135, .75)); /* Standard syntax */
+    background: linear-gradient(to right, rgba(22, 22, 22, .75), rgba(71, 71, 71, .75)); /* Standard syntax */
     z-index: 100;
     -moz-transition: 0.5s;
     -o-transition: 0.5s;
