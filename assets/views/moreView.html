@@ -109,12 +109,15 @@
                              ng-mouseleave="expSlideOut($index)">
                             <div class="experience experience-{{$index}}"
                                  style="background: url({{experience.blurry}}); background-size: 450px">
-                                <div style="background: rgba(0, 0, 0,.9); height: 100%">
+                                <div style="background: rgba(0, 0, 0,.45); height: 100%">
                                     <div class="exp-title">
                                         {{experience.title}}
                                     </div>
                                     <div class="exp-Description">
                                         {{experience.description}}
+                                    </div>
+                                    <div ng-repeat="bullet in experience.bullets" >
+                                        -{{bullet}}
                                     </div>
                                 </div>
                             </div>
@@ -131,12 +134,15 @@
                              ng-mouseleave="expSlideOut($index)">
                             <div class="experience experience-{{$index}}"
                                  style="background: url({{experience.blurry}}); background-size: 450px">
-                                <div style="background: rgba(0, 0, 0,.9); height: 100%">
+                                <div style="background: rgba(0, 0, 0,.7); height: 100%">
                                     <div class="exp-title">
                                         {{experience.title}}
                                     </div>
                                     <div class="exp-Description">
                                         {{experience.description}}
+                                    </div>
+                                    <div ng-repeat="bullet in experience.bullets" >
+                                        -{{bullet}}
                                     </div>
                                 </div>
                             </div>
