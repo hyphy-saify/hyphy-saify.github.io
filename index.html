@@ -38,7 +38,7 @@
 
 <body ng-app="app" ng-cloak>
     <div id="container" ng-controller="MainController" >
-        <div class="background" layout="row" >
+        <div hide class="background" layout="row" >
             <div id="firstImpression" flex="45" style="background:RGBA(0,0,0,0.5)">
                 <div id="firstImpressionText" layout="column">
                     <div flex="25"></div>
@@ -75,7 +75,7 @@
             <div id="navPadder"></div>
         </div>
 
-        <div ng-view></div>
+        <div class="content" ng-view></div>
 
     </div>
 </body>

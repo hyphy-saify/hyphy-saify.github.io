@@ -1,4 +1,10 @@
-app.controller('moreController', function($scope) {
+app.factory('ListService',function(){
+        return [listItem('Buy groceries'), listItem('Go to the gym'), listItem('Call parents')] ;
+    }
+)
+
+
+app.controller('moreController', function($scope, ListService, $http) {
 
 
 
@@ -117,6 +123,9 @@ app.controller('moreController', function($scope) {
 
 
 
+
+
+
     $scope.skills = [
         {
             image: "http://jsfiddle.net/img/logo.png",
@@ -166,8 +175,7 @@ app.controller('moreController', function($scope) {
     });
 
 
-    function isScrolledIntoView(elem)
-    {
+    function isScrolledIntoView(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
 
@@ -196,7 +204,6 @@ app.controller('moreController', function($scope) {
             $('.skill-'+i).animate({
 
                 left: left,
-                top: 45,
                 opacity: 1
 
             }, 500);
@@ -205,5 +212,137 @@ app.controller('moreController', function($scope) {
 
     }
 
+
+    var expShowCount = 0;
+
+    $scope.hub = function(){
+
+        var arr = []
+
+        for(var i =0; i<$scope.experiences.length;i++){
+            arr.push(i)
+        }
+
+        arr = shuffleArray(arr)
+        console.log(arr)
+
+
+
+        showem(arr)
+    }
+
+    function showem(arr){
+
+        $('.experiences-'+arr[expShowCount]).animate(
+            {opacity: 1 }, 100, function () {
+                if(expShowCount++<arr.length){
+                    showem(arr)
+                }
+            }
+        )
+
+
+    }
+
+
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+
+
+
+    //////quote machine
+    $scope.quote = 'Press the Button for a Random Quote'
+    $scope.author = 'Abdur';
+    $scope.buttonMessage = 'New Quote'
+    $scope.newQuote = function() {
+        getRandomQuote();
+
+
+        $('#tweetButton').fadeIn(500);
+
+    }
+    getRandomQuote = function() {
+
+        var quote;
+        var author;
+
+        $.ajax({
+            headers: {
+                "X-Mashape-Key": "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
+                Accept: "application/json",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
+            success: function(response) {
+                var json = eval("(" + response + ")");
+                quote = json.quote;
+                author = json.author;
+
+                $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + quote + '" ' + author));
+            }
+        });
+
+        setTimeout(function() {
+            $('#fadeQuote').fadeOut(500);
+        }, 0);
+
+        setTimeout(function() {
+            $scope.quote = quote;
+            $scope.author = author;
+            $scope.$apply();
+        }, 500);
+
+        setTimeout(function() {
+            $('#fadeQuote').fadeIn(500);
+        }, 500);
+
+
+    }
+
+
+    ////////to do list
+    $(document).ready(function() {
+        for (i = 0; i < $scope.toDoList.length; i++) {
+            $("#key-" + i.toString()).css('display', '');
+        }
+        $('#tweetButton').css('display', 'none');
+    });
+    $scope.toDoList = ListService
+    $scope.addToList = function () {
+        console.log($scope.toDoList)
+        $scope.toDoList.push(listItem($scope.newToDoListItem));
+        saif = '#key-';
+        saif = saif + ($scope.toDoList.length-1).toString();
+        setTimeout(function() {
+            $(saif).fadeIn(1700);
+        }, 1);
+    }
+    $scope.strike = function (index) {
+        if($scope.toDoList[index].style === "")
+            $scope.toDoList[index].style = {
+                textDecoration: 'line-through'
+            }
+        else
+            $scope.toDoList[index].style = ""
+    }
+
+
+
+
 });
+
+listItem = function (name) {
+    return{
+        name: name,
+        style: ""
+    }
+}
 

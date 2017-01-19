@@ -94,7 +94,7 @@ nav li a {
     transition: all 0.25s;
 }
 
-a:hover {
+nav a:hover {
     text-shadow: 0 0 4px #ffffff;
 }
 
@@ -107,16 +107,5 @@ section {
     width: 960px;
     margin: 0 auto;
     padding: 20px 0px;
-}
-
-#profilePic {
-    height: 200px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    border: 3px solid black;
-    background: url(../img/profile.jpg) 0px -25px;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 

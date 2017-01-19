@@ -23,7 +23,7 @@
 
 <style>
 
-    .experiences{
+    .experiences {
 
         width: 450px;
         height: 250px;
@@ -34,29 +34,24 @@
         border-color: white;
         background: white;
 
+    }
+
+    .experienceContainer {
 
     }
 
-    .experienceContainer{
-
-
-
-
-    }
-
-    .experience{
+    .experience {
         width: 100%;
         height: 100%;
         color: blue;
         text-align: center;
         display: none;
 
-
     }
 
-    .fuck{
-        width:304px;
-        height:228px;
+    .fuck {
+        width: 304px;
+        height: 228px;
 
     }
 
@@ -70,34 +65,50 @@
 </style>
 
 
-
-
-<div class="text-center" ng-controller="moreController" >
+<div class="text-center" ng-controller="moreController">
     <div class="content" style="color:white;">
-        <div style="height: 1900px;background: rgba(0,0,0,.85);" >
+        <div style="height: 2900px;background: rgba(0,0,0,.85);">
 
             <div hide> hi</div>
 
-            <div  layout='column' class="experienceContainer" layout-align="center center">
+            <div>
+                <div layout="row" class="aboutContainer" layout-align="center center">
+                    <div layout="column" flex="75" layout-align="center center">
 
+                        <div layout="row">About Me</div>
+                        <div layout="row">Aspiring Software Engineer</div>
+                        <div layout="row" layout-align="center center">
 
-                <div layout="row">Experiences</div>
-                <div  layout="row">
-                    <label><input type="checkbox" ng-model="fadeDisable">Disable Hide</label>
-                    <button ng-click="showAllExp()">Show All</button>
+                            I am a graduatiing Math-Computer science major from UC San Diego. Currently, I am looking
+                            for an internship or a full time role as a software engineer. My goal is to be a full stack
+                            software engineer. I am interested in working on enterprise level applications, learning
+                            about e-commerce platforms, and dealing with problems of scalability.
+
+                        </div>
+                    </div>
                 </div>
-                <div  layout-sm="row" layout-gt-sm="column">
-                    <div layout-sm="column" layout-gt-sm='row' flex>
-                        <div class='experiences'
-                     ng-repeat="experience in experiences"
-                     ng-if="$even"
-                     style="
+                <div layout='column' class="experienceContainer" layout-align="center center">
 
-                            background: url({{experience.image}});
-                            background-size: 450px;"
-                     ng-mouseenter="expSlideIn($index,'fuck')"
-                     ng-mouseleave="expSlideOut($index)">
-                        <div class="experience experience-{{$index}}" style="background: url({{experience.blurry}}); background-size: 450px">
+
+                    <div layout="row">Experiences</div>
+                    <div layout="row">
+                        <label><input type="checkbox" ng-model="fadeDisable">Disable Hide</label>
+                        <button ng-click="showAllExp()">Show All</button>
+                    </div>
+                    <div hidden
+                    " layout-sm="row" layout-gt-sm="column">
+                    <div layout-sm="column" layout-gt-sm='row' flex>
+                        <div class='experiences experiences-{{$index}}'
+                             ng-repeat="experience in experiences"
+                             ng-if="$even"
+                             style="
+
+                                background: url({{experience.image}});
+                                background-size: 450px;"
+                             ng-mouseenter="expSlideIn($index,'fuck')"
+                             ng-mouseleave="expSlideOut($index)">
+                            <div class="experience experience-{{$index}}"
+                                 style="background: url({{experience.blurry}}); background-size: 450px">
                                 <div style="background: rgba(0, 0, 0,.9); height: 100%">
                                     <div class="exp-title">
                                         {{experience.title}}
@@ -106,54 +117,106 @@
                                         {{experience.description}}
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
                     <div layout-sm="column" layout-gt-sm='row' flex>
-                        <div class='experiences'
-                         ng-repeat="experience in experiences"
-                         ng-if="$odd"
-                         style="
-                            background: url({{experience.image}});
-                            background-size: 450px;"
-                         ng-mouseenter="expSlideIn($index, 'nigga')"
-                         ng-mouseleave="expSlideOut($index)">
-                        <div class="experience experience-{{$index}}" style="background: url({{experience.blurry}}); background-size: 450px">
-                            <div style="background: rgba(0, 0, 0,.9); height: 100%">
-                                <div class="exp-title">
-                                    {{experience.title}}
-                                </div>
-                                <div class="exp-Description">
-                                    {{experience.description}}
+                        <div class='experiences experiences-{{$index}}'
+                             ng-repeat="experience in experiences"
+                             ng-if="$odd"
+                             style="
+                                background: url({{experience.image}});
+                                background-size: 450px;"
+                             ng-mouseenter="expSlideIn($index, 'nigga')"
+                             ng-mouseleave="expSlideOut($index)">
+                            <div class="experience experience-{{$index}}"
+                                 style="background: url({{experience.blurry}}); background-size: 450px">
+                                <div style="background: rgba(0, 0, 0,.9); height: 100%">
+                                    <div class="exp-title">
+                                        {{experience.title}}
+                                    </div>
+                                    <div class="exp-Description">
+                                        {{experience.description}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div layout='column' class="skillsContainer" layout-align="center center">
+                    <div layout="row">
+                        Skills
                     </div>
+                    <div layout="row" flex>
+
+                        <div class="skill skill-{{$index}}" ng-repeat="skill in skills" style="text-align: center">
+                            <p>{{skill.title}}</p>
+                            <img src="{{skill.image}}" style="display: block; margin: auto;"/>
+
+                            <p ng-repeat="bullet in skill.bulletPoints">{{bullet}}</p>
+                        </div>
+                    </div>
+
+
                 </div>
 
+                <div layout='column' class="funContainer" layout-align="center center">
+                    <div id="toDoList">
+                        <h1 layout="row">To-Do List</h1>
+                        <div layout="row">
+                            <input type="text" ng-model="newToDoListItem">
 
-                
+                        </div>
+                        <div layout="row">
+                            <button ng-click="addToList()">Add</button>
+                        </div>
+                        <li layout='row' id="key-{{$index}}" ng-repeat="key in toDoList track by $index"
+                            style="display: none;">
+                            <span ng-click="strike($index)" ng-style="key.style">
+                                {{key.name}}</span>
+                        </li>
+                    </div>
+                    <div id='quoteMachine'>
+                        <div id="fadeQuote">
+                            <p layout="row">"{{quote}}"</p>
+                            <footer layout="row">-{{author}}</footer>
+                        </div>
 
-            </div>
+                        <div layout="row">
+                            <button id='quoteButton' ng-click='newQuote()'>
+                                New Quote
+                            </button>
+                            <a id='tweet-quote' target="_blank" href=''>
 
-            <div layout='column' class="skillsContainer" layout-align="center center">
-                <div layout="row" >
-
-                    <div class="skill skill-{{$index}}" ng-repeat="skill in skills" style="text-align: center">
-                        <p>{{skill.title}}</p>
-                        <img src="{{skill.image}}" style="display: block; margin: auto;"/>
-
-                        <p ng-repeat="bullet in skill.bulletPoints">{{bullet}}</p>
+                                <button id='tweetButton' class="btn btn-primary">
+                                    Tweet
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
+
 
         </div>
+        <div>
+            <div layout="column" layout-align="center center">
+
+
+            </div>
+
+
+        </div>
+
+
     </div>
+
+
+</div>
+
+
+</div>
+</div>
 </div>
 
 
