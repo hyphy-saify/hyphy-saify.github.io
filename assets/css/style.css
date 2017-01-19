@@ -12,8 +12,8 @@ a {
     background-size: cover;
  }
 
-#content{
-    background: url(../img/bg.jpg) no-repeat center center fixed;
+.content{
+    background: url('../img/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -119,3 +119,4 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
 }
+

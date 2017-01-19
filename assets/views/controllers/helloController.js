@@ -43,8 +43,6 @@ app.controller('helloController', function($scope, ListService, $http) {
     $scope.buttonMessage = 'New Quote'
 
 
-
-
     $scope.newQuote = function() {
         getRandomQuote();
 
@@ -53,12 +51,7 @@ app.controller('helloController', function($scope, ListService, $http) {
 
     }
 
-
-
-
     getRandomQuote = function() {
-
-
 
         var quote;
         var author;
@@ -75,7 +68,7 @@ app.controller('helloController', function($scope, ListService, $http) {
                 quote = json.quote;
                 author = json.author;
 
-                $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + $scope.quote + '" ' + $scope.author));
+                $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + quote + '" ' + author));
             }
         });
 
@@ -95,10 +88,6 @@ app.controller('helloController', function($scope, ListService, $http) {
 
 
     }
-
-
-
-
 
 });
 

@@ -6,6 +6,7 @@ $(document).ready(function() {
     stickyNav()
 
 
+
 });
 
 
@@ -32,13 +33,13 @@ function fadeInIntro() {
     }, 500);
     setTimeout(function() {
         $('#big').fadeIn(500);
-    }, 1000);
-    setTimeout(function() {
-        $('#small').fadeIn(750);
     }, 1500);
     setTimeout(function() {
+        $('#small').fadeIn(750);
+    }, 2000);
+    setTimeout(function() {
         $('#quote').fadeIn(1000);
-    }, 2250);
+    }, 2750);
 
 }
 

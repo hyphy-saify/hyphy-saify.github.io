@@ -30,6 +30,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/views/controllers/helloController.js"></script>
     <script src="assets/views/controllers/blogConroller.js"></script>
+    <script src="assets/views/controllers/moreController.js"></script>
 
     <title>Saif's Personal Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +38,7 @@
 
 <body ng-app="app" ng-cloak>
     <div id="container" ng-controller="MainController" >
-        <div class="background" layout="row">
+        <div class="background" layout="row" >
             <div id="firstImpression" flex="45" style="background:RGBA(0,0,0,0.5)">
                 <div id="firstImpressionText" layout="column">
                     <div flex="25"></div>
@@ -45,7 +46,7 @@
                         <div id="big">
                             Saif Rahman
                         </div>
-                        <div id="small">Website is under construction</div>
+                        <div id="small">Aspiring Software Engineer</div>
                     </div>
                 </div>
             </div>
@@ -62,13 +63,17 @@
             </div>
         </div>
 
-        <nav>
-            <li ><a href="#/" >Home</a></li>
-            <li ><a href="#blog" >Blog</a></li>
-            <li ><a href="#more">More</a></li>
-        </nav>
-        <div id="navPadder"></div>
-
+        <div class="nav">
+            <nav>
+                <li><a>fuck</a></li>
+                <div hide class="willDealWithLater">
+                    <li ><a href="#hello" >Home</a></li>
+                    <li ><a href="#blog" >Blog</a></li>
+                    <li ><a href="#more">More</a></li>
+                </div>
+            </nav>
+            <div id="navPadder"></div>
+        </div>
 
         <div ng-view></div>
 

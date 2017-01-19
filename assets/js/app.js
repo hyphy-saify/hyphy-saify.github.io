@@ -4,18 +4,23 @@ app.config(function($routeProvider) {
     $routeProvider
     // route for the home page
         .when('/', {
-            templateUrl : 'assets/views/helloView.html',
-            controller  : 'helloController'
+            templateUrl : 'assets/views/moreView.html',
+            controller  : 'moreController'
         })
         // route for the about page
-        .when('/blog', {
+        .when('/hello', {
             templateUrl : 'assets/views/helloView.html',
             controller  : 'helloController'
         })
-       /* .when('/blog', {
+        .when('/blog', {
+            templateUrl : 'assets/views/moreView.html',
+            controller  : 'moreController'
+
+        })
+        .when('/more', {
             templateUrl : 'assets/views/blogView.html',
             controller  : 'blogController'
-        })*/
+        })
 });
 
 
@@ -34,6 +39,7 @@ app.controller('MainController', function($scope, initialService){
         if (i ==0) {
             fadeInIntro()
             i++}
+
     });
 
 });
