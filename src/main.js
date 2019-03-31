@@ -23,7 +23,6 @@ new Vue({
   el: '#app',
   render: h => h(App),
   router: new VueRouter({
-    mode: 'history',
     routes: [
       { path: '/about', component: MainPage },
       { path: '/blog', component: OtherPage },
