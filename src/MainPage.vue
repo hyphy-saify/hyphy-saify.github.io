@@ -20,7 +20,7 @@
     <template v-for="thing in things">
       <h3 :key="`${thing.title}-title`">{{thing.title}}</h3>
       <template v-for="item in thing.items">
-        <p :key="item" class="about__item">- {{item}}</p>
+        <p :key="`${thing.title}-${item}`" class="about__item">- {{item}}</p>
       </template>
     </template>
   </div>
@@ -30,6 +30,9 @@
 .about {
   padding: 10px;
   padding-top:30px;
+  h3 {
+    color: #fff6bc;
+  }
   &__head {
     display: flex;
     align-items: flex-end;
@@ -97,18 +100,14 @@ export default {
         {
           title: "Things I Like - Front End Development",
           items: [
-            "VueJS",
-            "Typescript",
-            "Webpack",
-            "CSS Flexbox / CSS Grid",
-            "BEM Methodology"
+            "VueJS, Typescript, Webpack",
+            "CSS Flexbox / CSS Grid, BEM Methodology"
           ]
         },
         {
           title: "Things I Like - Back End Development",
           items: [
-            "NodeJS (TSNode)",
-            "REST APIs",
+            "NodeJS (TSNode), REST APIs",
           ]
         },
         {
