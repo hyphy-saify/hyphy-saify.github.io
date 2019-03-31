@@ -46,7 +46,8 @@
         margin-left: 3px;
       }
     }
-    &__profile-pic {   
+    &__profile-pic { 
+      border-radius: 4px;
       width: 100px;
       height: 100px;
       margin-right: 10px;
