@@ -28,8 +28,9 @@
 
 <style lang="sass">
 .about {
+  padding: 10px;
+  padding-top:30px;
   &__head {
-    margin-top: 20px;
     display: flex;
     align-items: flex-end;
     &__name-and-links {
@@ -54,7 +55,6 @@
       max-width: 70%;
     }
   }
-  padding: 10px;
   h3 {
     margin-top: 20px;
   }
@@ -83,7 +83,7 @@ export default {
         {
           title: "Credentials",
           items: [
-            "Frontend (more and more Fullstack every day) Software Engineer @ SonicWALL",
+            "Frontend (and some Backend) Software Engineer @ SonicWALL",
             "UCSD CS '17",
           ],
         },

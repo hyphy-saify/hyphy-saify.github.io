@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import App from './App.vue';
 import MainPage from './MainPage.vue';
-import OtherPage from './OtherPage.vue';
+import BlogPage from './BlogPage.vue';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import VueGoogleCharts from 'vue-google-charts'
@@ -25,7 +25,7 @@ new Vue({
   router: new VueRouter({
     routes: [
       { path: '/about', component: MainPage },
-      { path: '/blog', component: OtherPage },
+      { path: '/blog', component: BlogPage },
       {
         path: '/*',
         redirect: '/about',
