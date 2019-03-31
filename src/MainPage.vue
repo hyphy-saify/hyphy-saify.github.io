@@ -125,7 +125,7 @@ export default {
         {
           title: "Things I'm Interested In Non Professionally (Abridged Version)",
           items: [
-            "Outdoor activities, fitness",
+            "Outdoor activities, fitness, high speed chess",
             "Smelling the flowers",
             "Interpersonal Relationships",
           ],
@@ -133,7 +133,8 @@ export default {
         {
           title: "Todos",
           items: [
-            "Setup blog page, add a blog post - 'Thoughts on Getting my AWS Cert - From a Front end developer Perspective'",
+            "write blog posts",
+            "make it mobile responsive",
             "add portfolio page",
           ]
         },
