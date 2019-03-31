@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 import App from './App.vue';
 import MainPage from './MainPage.vue';
 import BlogPage from './BlogPage.vue';
+import BlogRoutes from './blogposts'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import VueGoogleCharts from 'vue-google-charts'
@@ -25,7 +26,10 @@ new Vue({
   router: new VueRouter({
     routes: [
       { path: '/about', component: MainPage },
-      { path: '/blog', component: BlogPage },
+      { path: '/blog',
+        component: BlogPage,
+        children: BlogRoutes,
+      },
       {
         path: '/*',
         redirect: '/about',
