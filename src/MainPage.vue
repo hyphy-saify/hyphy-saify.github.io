@@ -1,11 +1,14 @@
 <template>
   <div class="about">
-    
-    
     <div class="about__head">
-      <img src="./img/profilepic.jpg"> 
+      <img class="about__head__profile-pic" src="./img/profilepic.jpg"> 
       <div>
-        <h2>Abdur Saif Rahman</h2>
+        <div class="about__head__name-and-links">
+          <h2>Abdur Saif Rahman</h2>
+          <a class="about__head__name-and-links__link" v-for="iconLink in iconLinks" :key="iconLink.src" :href="iconLink.href" target="_blank">
+            <Icon :type="iconLink.type" />  
+          </a>
+        </div>
         <p>
           <i>“The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well.”</i>
         </p>
@@ -29,7 +32,20 @@
     margin-top: 20px;
     display: flex;
     align-items: flex-end;
-    img {   
+    &__name-and-links {
+      display: flex;
+      align-items: flex-end;
+      img {
+        width: 14px;
+        height: 14px;
+        margin-left: 5px;
+      }
+      &__link {
+        font-size: 16px;
+        margin-left: 3px;
+      }
+    }
+    &__profile-pic {   
       width: 100px;
       height: 100px;
       margin-right: 10px;
@@ -53,12 +69,28 @@
 export default {
   data() {
     return {
+      iconLinks: [
+        {
+          href: "https://twitter.com/probablysaif",
+          type: "logo-twitter"
+        },
+        {
+          href: "https://www.linkedin.com/in/a5rahman/",
+          type: "logo-linkedin"
+        },
+      ],
       things: [
         {
           title: "Credentials",
           items: [
             "Frontend (more and more Fullstack every day) Software Engineer @ SonicWALL",
             "UCSD CS '17",
+          ],
+        },
+        {
+          title: "Email",
+          items: [
+            "probablysaif @ gmail dot com",
           ],
         },
         {
@@ -101,7 +133,6 @@ export default {
         {
           title: "Todos",
           items: [
-            "Add professional links",
             "Setup blog page, add a blog post - 'Thoughts on Getting my AWS Cert - From a Front end developer Perspective'",
             "add portfolio page",
           ]
