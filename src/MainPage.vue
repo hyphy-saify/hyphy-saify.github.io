@@ -137,6 +137,8 @@ export default {
             "make it mobile responsive",
             "add portfolio page",
             "update iview global theme",
+            "look into adding website thumbnails",
+            "add a cool pixel art gif somewhere",
           ]
         },
 
