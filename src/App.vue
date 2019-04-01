@@ -29,7 +29,7 @@
   height: 100%;
 
   &__footer {
-    padding: 20px;
+    padding: 10px;
   }
 }
 
