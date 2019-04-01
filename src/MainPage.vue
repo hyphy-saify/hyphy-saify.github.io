@@ -140,7 +140,7 @@ export default {
             "look into adding website thumbnails",
             "Look into SEO",
             "Look into adding some commenting ability; disqus, etc",
-            "Look into what other features most blogs have, i.e. sharing, etc"
+            "Look into what other features most blogs have, i.e. sharing, searching posts, etc"
           ]
         },
 
