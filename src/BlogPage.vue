@@ -7,8 +7,10 @@
     </h2>
     <router-view class="blog__post" v-if="showRouter"></router-view>
     <div class="blog__posts" v-else>
-      <Post1 class="blog__posts__individ"/>
-      <Post0 class="blog__posts__individ"/>
+
+      <BlogpostContainer continueReading="#/blog/some-of-my-favorite-vs-code-extentions">
+        <Post1 />
+      </BlogpostContainer>
 
     </div>
   </div>
@@ -23,11 +25,13 @@
 <script>
 import Post1 from "./blogposts/post1.vue";
 import Post0 from "./blogposts/post0.vue";
+import BlogpostContainer from "./components/blogpostContainer.vue";
 
 export default {
   components: {
     Post1,
     Post0,
+    BlogpostContainer,
   },
   computed: {
     showRouter: function () {

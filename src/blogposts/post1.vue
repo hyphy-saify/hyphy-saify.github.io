@@ -69,6 +69,8 @@
       <p>Not an extension, but I like this thing too.</p>
       <p>View -> Appearance -> Toggle Centered Layout to get into extra focused coding mode. Toggle Zen Mode too while you’re at it!</p>
       <img src="../img/blogposts/post1/centered-layout.png">
+    
+      <p>Thanks for reading, and feel free to contact me at probablysaif @ gmail dot com</p>
     </div>
   </div>
 </template>

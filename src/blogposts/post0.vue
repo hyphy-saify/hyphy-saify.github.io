@@ -20,8 +20,8 @@
 }
 
 .blogpost {
-  max-width: 70%;
-  border-bottom: solid 1px #d3d3d3;
+  max-width: 70vw;
+  border-bottom: solid 1px #fff6bc;
   padding-bottom: 20px;
   &__title {
     margin-top: 15px;
