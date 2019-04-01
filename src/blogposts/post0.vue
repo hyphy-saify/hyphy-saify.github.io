@@ -6,7 +6,7 @@
             Frontend Developer Perspective: What I Learned From getting my AWS Solutions Certified Architect Associate Level Certificate
           </a>
       </h3>
-      <small>3/30/2019</small>
+      <small>DATE</small>
     </div>
 
     <div class="blogpost__content">
@@ -25,10 +25,24 @@
   padding-bottom: 20px;
   &__title {
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   &__content {
     padding-top: 20px;
+    img {
+      max-width: 650px;
+      max-height: 650px;
+    }
+    p {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    h4 {
+      color: #fff6bc;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
   }
 }
 </style>
