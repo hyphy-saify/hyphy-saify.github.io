@@ -16,6 +16,6 @@
 <style lang="sass">
 * {
   color: #d3d3d3;
-  background-color: #4c4c4c;
+  background-color: #383838;
 }
 </style>
