@@ -136,6 +136,7 @@ export default {
             "write blog posts",
             "make it mobile responsive",
             "add portfolio page",
+            "update iview global theme",
           ]
         },
 
