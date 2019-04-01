@@ -28,8 +28,11 @@
 
 <style lang="sass">
 .about {
-  padding: 10px;
-  padding-top:30px;
+  margin: 10px;
+  margin-top:30px;
+  border-bottom: solid 1px #fff6bc;
+  padding-bottom: 20px;
+  max-width: 70vw;
   h3 {
     color: #fff6bc;
   }
@@ -54,9 +57,6 @@
       width: 100px;
       height: 100px;
       margin-right: 10px;
-    }
-    p {
-      max-width: 70%;
     }
   }
   h3 {
@@ -138,7 +138,6 @@ export default {
             "add portfolio page",
             "update iview global theme",
             "look into adding website thumbnails",
-            "add a cool pixel art gif somewhere",
           ]
         },
 
