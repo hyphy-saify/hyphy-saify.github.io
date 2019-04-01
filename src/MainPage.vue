@@ -154,7 +154,7 @@ export default {
             "WET (Write Everything Twice)",
             "Cloud/DevOPS and fault tolerant systems",
             "UI / UX",
-            "WebAssembly and the future of rich front end web applications",
+            "React, GraphQL, WebAssembly, and the future of rich web applications",
             "Startups",
             "Interpersonal Relationships",
           ]
