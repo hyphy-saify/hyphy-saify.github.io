@@ -6,7 +6,7 @@ import MainPage from './MainPage.vue';
 import BlogPage from './BlogPage.vue';
 import BlogRoutes from './blogposts'
 import iView from 'iview';
-import 'iview/dist/styles/iview.css';
+import './theme.less';
 import VueGoogleCharts from 'vue-google-charts'
 
 console.clear();

@@ -168,7 +168,6 @@ export default {
             "write blog posts",
             "setup google analytics",
             "add portfolio page",
-            "update iview global theme",
             "look into adding website thumbnails",
             "Look into SEO",
             "Look into adding some commenting ability; disqus, etc",
