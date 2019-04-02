@@ -23,7 +23,12 @@
       <router-view></router-view>
     </div>
     <div class="lifeofsaif__footer">
-      <img src="./img/footer-0.gif" style="object-fit: contain; width:200px;">
+      <div>
+        <img src="./img/footer-0.gif" style="object-fit: contain; width:200px;">
+      </div>
+      <div>
+      <iframe style="margin-top: 10px;" src="https://open.spotify.com/embed/track/0sMImBteCIVUKNhcyx3Cyx" width="300" height="80" frameborder="0" allowtransparency="false" allow="encrypted-media"></iframe>
+      </div>
     </div>
   </div>
 </template>
