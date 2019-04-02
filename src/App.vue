@@ -9,8 +9,16 @@
         <a href="https://github.com/lifeofsaif/lifeofsaif.github.io" target="_blank">here</a>.
       </small>
       <div>
-        <router-link to="/about">About</router-link>|
-        <router-link to="/blog">Blog</router-link>
+        <Menu mode="horizontal" :active-name="path">
+          <MenuItem name="about" to="/about">
+              <Icon type="ios-paper" />
+              About
+          </MenuItem>
+          <MenuItem name="blog" to="/blog">
+              <Icon type="ios-people" />
+              Blog
+          </MenuItem>
+        </Menu>
       </div>
       <router-view></router-view>
     </div>
@@ -28,6 +36,10 @@
   flex-direction: column;
   height: 100%;
 
+  .ivu-menu {
+    background: none;
+  }
+
   &__footer {
     padding: 10px;
   }
@@ -42,3 +54,13 @@ html, body {
   background-color: #383838;
 }
 </style>
+
+<script>
+export default {
+  computed: {
+    path: function () {
+      return this.$route.path.split("/")[1];
+    },
+  },
+};
+</script>
