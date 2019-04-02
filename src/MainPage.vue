@@ -171,6 +171,7 @@ export default {
           title: "Todos",
           items: [
             "write blog posts",
+            "setup google analytics",
             "make it mobile responsive",
             "add portfolio page",
             "update iview global theme",
