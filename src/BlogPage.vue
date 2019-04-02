@@ -18,7 +18,6 @@
 
 <style lang="sass">
 .blog {
-  padding: 10px;
   padding-top:30px;
 }
 </style>

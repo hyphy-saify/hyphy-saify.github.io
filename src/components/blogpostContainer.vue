@@ -1,5 +1,5 @@
 <template>
-  <div class="blogpost-container" style="  border-bottom: solid 1px #fff6bc;padding-bottom: 20px; max-width: 70%;">
+  <div class="blogpost-container" style="  border-bottom: solid 1px #fff6bc;padding-bottom: 20px;">
     <div class="blogpost-container__content" style="height: 200px;overflow: hidden;text-overflow: ellipsis;">
       <slot/>
     </div>

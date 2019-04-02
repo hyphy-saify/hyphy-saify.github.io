@@ -1,5 +1,5 @@
 <template>
-  <div :class="['about', {'about--desktop': !isMobile}]">
+  <div :class="['about']">
     <div class="about__head" v-if="!isMobile">
       <img class="about__head__profile-pic" src="./img/profilepic.jpg"> 
       <div>
@@ -43,11 +43,6 @@
 
 <style lang="sass">
 .about {
-
-  &--desktop {
-    max-width: 70vw;
-  }
-  margin: 10px;
   margin-top:30px;
   border-bottom: solid 1px #fff6bc;
   padding-bottom: 20px;
@@ -172,7 +167,6 @@ export default {
           items: [
             "write blog posts",
             "setup google analytics",
-            "make it mobile responsive",
             "add portfolio page",
             "update iview global theme",
             "look into adding website thumbnails",

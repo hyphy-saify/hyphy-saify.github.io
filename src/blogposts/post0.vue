@@ -20,7 +20,6 @@
 }
 
 .blogpost {
-  max-width: 70vw;
   border-bottom: solid 1px #fff6bc;
   padding-bottom: 20px;
   &__title {
