@@ -163,7 +163,9 @@ export default {
         {
           title: "Todos",
           items: [
-            "write blog posts",
+            "add email list functionality",
+            "connect to basic lambda function", 
+            "write blog post - 'Front End Developer Perspective - What I Gained From Getting my AWS Cert'",
             "setup google analytics",
             "add portfolio page",
             "look into adding website thumbnails",
