@@ -48,6 +48,7 @@
   padding-bottom: 20px;
   h3 {
     color: #fff6bc;
+    margin-top: 20px;
   }
   &__mobile-head {
     &__profile-pic {
@@ -91,9 +92,6 @@
       height: 100px;
       margin-right: 10px;
     }
-  }
-  h3 {
-    margin-top: 20px;
   }
   &__item {
     margin-left: 10px;
