@@ -168,6 +168,7 @@ export default {
             "write blog post - 'Front End Developer Perspective - What I Gained From Getting my AWS Cert'",
             "brainstorm other blog post ideas",
             "setup google analytics",
+            "Setup Bing clarity (for research purposes)",
             "add portfolio page",
             "add page for non technical posts",
             "look into adding website thumbnails",
